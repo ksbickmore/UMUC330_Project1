@@ -1,0 +1,53 @@
+\begin{DoxyAuthor}{Author}
+Kristopher Bickmore 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 20, 2016 
+\end{DoxyDate}
+\hypertarget{index_Build}{}\section{Build}\label{index_Build}
+\hypertarget{index_Windows}{}\subsection{Windows}\label{index_Windows}
+Tested on\+:~\newline
+Windows 10 Pro 64-\/bit~\newline
+Version 1607~\newline
+OS Build 14393.\+447~\newline
+ Microsoft Visual Studio Community 2015~\newline
+Version 14.\+0.\+25431.\+01 Update 3\hypertarget{index_Linux}{}\subsection{Linux}\label{index_Linux}
+Tested on\+:~\newline
+Ubuntu 64-\/bit~\newline
+Version 16.\+04.\+1 L\+TS xenial
+
+G\+NU g++~\newline
+Version 5.\+4.\+0 20160609
+
+Eclipse~\newline
+Version Neon.\+1a~\newline
+Release 4.\+6.\+1~\newline
+Build id\+: 20161007-\/1200
+
+go to Project Properties -\/$>$ c/c++ Build -\/$>$ settings -\/$>$ Tool Settings -\/$>$ G\+CC C++ Compiler~\newline
+Under Dialect select I\+SO c++1y(-\/std=c++1y)
+
+go to Project Properties -\/$>$ c/c++ Build -\/$>$ settings -\/$>$ Tool Settings -\/$>$ G\+CC C++ Linker~\newline
+Under Libraries add stdc++fs\hypertarget{index_MINGW32}{}\subsection{M\+I\+N\+G\+W32}\label{index_MINGW32}
+There are bugs in the M\+I\+N\+G\+W32 compiler that mishandle c++11 functionality such as std\+::stoi or std\+::to\+\_\+string. \hypertarget{index_MINGW64}{}\subsection{M\+I\+N\+G\+W64}\label{index_MINGW64}
+There are bugs in the M\+I\+N\+G\+W64 installer that did not allow me to ever properly install. Source code installation~\newline
+failed do to missing libraries.~\newline
+\hypertarget{index_Cygwin}{}\subsection{Cygwin}\label{index_Cygwin}
+The Cygwin g++ compiler fails to properly resolve templates.~\newline
+for instance passing a string into the path constructor does not resolve properly.~\newline
+template$<$ class Source $>$~\newline
+path( const Source\& source );~\newline
+\hypertarget{index_Usage}{}\section{Usage}\label{index_Usage}
+The program can be run with no options or a combination of the below.~\newline
+~\newline
+ Usage\+: parser(.exe) $<$option(s)$>$~\newline
+ Lexer/\+Parser for files using the grammar specified for C\+M\+SC 330 Project 1.~\newline
+~\newline
+ Optional Options\+:~\newline
+ -\/h,--help Show this help message.~\newline
+ -\/d,--directory D\+I\+R\+E\+C\+T\+O\+RY Specify Path holding files to test. Cannot use with --file.~\newline
+ (Defaults to ..\textbackslash{}test\+\_\+input\+\_\+files\textbackslash{} / ../test\+\_\+input\+\_\+files/)~\newline
+ -\/o,--output D\+I\+R\+E\+C\+T\+O\+RY Specify Directory for output files.~\newline
+ (Defaults to ..\textbackslash{}test\+\_\+input\+\_\+files\textbackslash{} / ../test\+\_\+input\+\_\+files/)~\newline
+ -\/f,--file F\+I\+LE Use to Parse only a single file. Cannot use with --directory~\newline
+ -\/p,--print Print output to screen.~\newline

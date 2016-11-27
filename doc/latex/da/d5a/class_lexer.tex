@@ -1,0 +1,152 @@
+\hypertarget{class_lexer}{}\section{Lexer Class Reference}
+\label{class_lexer}\index{Lexer@{Lexer}}
+
+
+This class is used to Lex a specific grammar\+:  
+
+
+
+
+Collaboration diagram for Lexer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{dd/d77/class_lexer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lexer_a41a25e738dff5c31caf442990709adde}{Lexer} (std\+::experimental\+::filesystem\+::path filename)  throw (std\+::runtime\+\_\+error)
+\item 
+std\+::string \hyperlink{class_lexer_a7fac880306793388754a6f9da34c3493}{get\+Current\+Lexeme} ()
+\item 
+\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} \hyperlink{class_lexer_aa8d555ee90674216793bb43c05bba64f}{get\+Next\+Token} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} \hyperlink{class_lexer_a50bcd81726a049971e16c4a6e8223604}{check\+Lexeme} (std\+::string lexeme)
+\item 
+std\+::string \hyperlink{class_lexer_a97988fed0390931fa45fe8a8fee39e2f}{get\+Next\+Lexeme} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_lexer_adc8bdce9d027599208cd772a81b954d2}{}\label{class_lexer_adc8bdce9d027599208cd772a81b954d2} 
+std\+::ifstream \hyperlink{class_lexer_adc8bdce9d027599208cd772a81b954d2}{file\+Reader}
+\begin{DoxyCompactList}\small\item\em A file stream reading from the current file to be parsed. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_aedfea368fa8e818b053df4f4cec803ba}{}\label{class_lexer_aedfea368fa8e818b053df4f4cec803ba} 
+std\+::string \hyperlink{class_lexer_aedfea368fa8e818b053df4f4cec803ba}{current\+Lexeme}
+\begin{DoxyCompactList}\small\item\em String which contains the lexeme currently being parsed/lexed. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_a405095fbb33187d0cfff8b736970f4f1}{}\label{class_lexer_a405095fbb33187d0cfff8b736970f4f1} 
+std\+::string \hyperlink{class_lexer_a405095fbb33187d0cfff8b736970f4f1}{last\+Lexeme}
+\begin{DoxyCompactList}\small\item\em The string containing the lexeme that was previously looked at. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_aab04ec42cbcd2e00f57fd4b9fd2255e4}{}\label{class_lexer_aab04ec42cbcd2e00f57fd4b9fd2255e4} 
+std\+::string \hyperlink{class_lexer_aab04ec42cbcd2e00f57fd4b9fd2255e4}{punctuation}
+\begin{DoxyCompactList}\small\item\em A string containing punctuation values which are delimiters in some way. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_a8bec53e7c6adc2dd4f4ba5f6ac26d8b6}{}\label{class_lexer_a8bec53e7c6adc2dd4f4ba5f6ac26d8b6} 
+std\+::string \hyperlink{class_lexer_a8bec53e7c6adc2dd4f4ba5f6ac26d8b6}{file\+String}
+\begin{DoxyCompactList}\small\item\em String containing the text of the file. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_af0484f3df6124444ce846bdfb5c0d14f}{}\label{class_lexer_af0484f3df6124444ce846bdfb5c0d14f} 
+\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} \hyperlink{class_lexer_af0484f3df6124444ce846bdfb5c0d14f}{current\+Token}
+\begin{DoxyCompactList}\small\item\em The token that is related to the current lexeme. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_a6c351275177d71410545283a0d470021}{}\label{class_lexer_a6c351275177d71410545283a0d470021} 
+\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} \hyperlink{class_lexer_a6c351275177d71410545283a0d470021}{previous\+Token}
+\begin{DoxyCompactList}\small\item\em The token that is related to the prior lexeme. \end{DoxyCompactList}\item 
+\hypertarget{class_lexer_aa7d95630ef9e53f6bdc5a9386420b343}{}\label{class_lexer_aa7d95630ef9e53f6bdc5a9386420b343} 
+unsigned int \hyperlink{class_lexer_aa7d95630ef9e53f6bdc5a9386420b343}{index}
+\begin{DoxyCompactList}\small\item\em Index into the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to Lex a specific grammar\+:~\newline
+ gui \+:\+:= Window S\+T\+R\+I\+NG \textquotesingle{}(\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{})\textquotesingle{} layout widgets End \textquotesingle{}.\textquotesingle{}~\newline
+ layout \+:\+:= Layout layout\+\_\+type \textquotesingle{}\+:\textquotesingle{}~\newline
+ layout\+\_\+type \+:\+:=~\newline
+ Flow \textquotesingle{}(\textquotesingle{} \mbox{[} align \mbox{]} \textquotesingle{})\textquotesingle{}$\vert$~\newline
+ Border \textquotesingle{}(\textquotesingle{} \mbox{[} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \mbox{]} \textquotesingle{})\textquotesingle{}$\vert$~\newline
+ Grid \textquotesingle{}(\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \mbox{[}\textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER\mbox{]} \textquotesingle{})\textquotesingle{}~\newline
+ align \+:\+:= L\+E\+FT $\vert$ R\+I\+G\+HT $\vert$ C\+E\+N\+T\+ER~\newline
+ widgets \+:\+:= widget widgets $\vert$ widget~\newline
+ widget \+:\+:=~\newline
+ Button S\+T\+R\+I\+NG \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Group radio\+\_\+buttons End \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Label S\+T\+R\+I\+NG \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Panel layout widgets End \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Textfield N\+U\+M\+B\+ER \textquotesingle{};\textquotesingle{}~\newline
+ radio\+\_\+buttons \+:\+:= radio\+\_\+button radio\+\_\+buttons $\vert$ radio\+\_\+button~\newline
+ radio\+\_\+button \+:\+:= Radio S\+T\+R\+I\+NG \textquotesingle{};\textquotesingle{}~\newline
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_lexer_a41a25e738dff5c31caf442990709adde}{}\label{class_lexer_a41a25e738dff5c31caf442990709adde} 
+\index{Lexer@{Lexer}!Lexer@{Lexer}}
+\index{Lexer@{Lexer}!Lexer@{Lexer}}
+\subsubsection{\texorpdfstring{Lexer()}{Lexer()}}
+{\footnotesize\ttfamily Lexer\+::\+Lexer (\begin{DoxyParamCaption}\item[{std\+::experimental\+::filesystem\+::path}]{filename }\end{DoxyParamCaption}) throw  std\+::runtime\+\_\+error) }
+
+\hyperlink{class_lexer}{Lexer} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the path to an input file to be lexed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{class_lexer}{Lexer} object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_lexer_a50bcd81726a049971e16c4a6e8223604}{}\label{class_lexer_a50bcd81726a049971e16c4a6e8223604} 
+\index{Lexer@{Lexer}!check\+Lexeme@{check\+Lexeme}}
+\index{check\+Lexeme@{check\+Lexeme}!Lexer@{Lexer}}
+\subsubsection{\texorpdfstring{check\+Lexeme()}{checkLexeme()}}
+{\footnotesize\ttfamily \hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} Lexer\+::check\+Lexeme (\begin{DoxyParamCaption}\item[{std\+::string}]{lexeme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates that the retrieved lexeme is a valid token. 
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & a string to be compared against valid tokens \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding token 
+\end{DoxyReturn}
+\hypertarget{class_lexer_a7fac880306793388754a6f9da34c3493}{}\label{class_lexer_a7fac880306793388754a6f9da34c3493} 
+\index{Lexer@{Lexer}!get\+Current\+Lexeme@{get\+Current\+Lexeme}}
+\index{get\+Current\+Lexeme@{get\+Current\+Lexeme}!Lexer@{Lexer}}
+\subsubsection{\texorpdfstring{get\+Current\+Lexeme()}{getCurrentLexeme()}}
+{\footnotesize\ttfamily std\+::string Lexer\+::get\+Current\+Lexeme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the lexeme that is currently being looked at. \begin{DoxyReturn}{Returns}
+the lexeme 
+\end{DoxyReturn}
+\hypertarget{class_lexer_a97988fed0390931fa45fe8a8fee39e2f}{}\label{class_lexer_a97988fed0390931fa45fe8a8fee39e2f} 
+\index{Lexer@{Lexer}!get\+Next\+Lexeme@{get\+Next\+Lexeme}}
+\index{get\+Next\+Lexeme@{get\+Next\+Lexeme}!Lexer@{Lexer}}
+\subsubsection{\texorpdfstring{get\+Next\+Lexeme()}{getNextLexeme()}}
+{\footnotesize\ttfamily std\+::string Lexer\+::get\+Next\+Lexeme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Retrieves the next lexeme from the file. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_lexer_aa8d555ee90674216793bb43c05bba64f}{}\label{class_lexer_aa8d555ee90674216793bb43c05bba64f} 
+\index{Lexer@{Lexer}!get\+Next\+Token@{get\+Next\+Token}}
+\index{get\+Next\+Token@{get\+Next\+Token}!Lexer@{Lexer}}
+\subsubsection{\texorpdfstring{get\+Next\+Token()}{getNextToken()}}
+{\footnotesize\ttfamily \hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} Lexer\+::get\+Next\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the next token in the current line \begin{DoxyReturn}{Returns}
+The Token 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\hyperlink{_lexer_8h}{Lexer.\+h}\item 
+C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\hyperlink{_lexer_8cpp}{Lexer.\+cpp}\end{DoxyCompactItemize}

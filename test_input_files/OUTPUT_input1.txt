@@ -1,0 +1,47 @@
+Entering GUI Production
+Next Token is: 0; Next Lexeme is: Window
+Next Token is: 1; Next Lexeme is: Calculator
+Next Token is: 3; Next Lexeme is: (
+Next Token is: 24; Next Lexeme is: 200
+Next Token is: 25; Next Lexeme is: ,
+Next Token is: 24; Next Lexeme is: 200
+Next Token is: 4; Next Lexeme is: )
+Entering Layout Production
+Next Token is: 2; Next Lexeme is: Layout
+Entering Layout Type Production
+Next Token is: 7; Next Lexeme is: Flow
+Next Token is: 3; Next Lexeme is: (
+Next Token is: 4; Next Lexeme is: )
+Exiting Layout Type Production
+Next Token is: 5; Next Lexeme is: :
+Exiting Layout Production
+Entering Widgets Production
+Entering Widget Production
+Next Token is: 17; Next Lexeme is: Textfield
+Next Token is: 24; Next Lexeme is: 20
+Next Token is: 6; Next Lexeme is: ;
+Exiting Widget Production
+Entering Widgets Production
+Entering Widget Production
+Next Token is: 16; Next Lexeme is: Panel
+Entering Layout Production
+Next Token is: 2; Next Lexeme is: Layout
+Entering Layout Type Production
+Next Token is: 9; Next Lexeme is: Grid
+Next Token is: 3; Next Lexeme is: (
+Next Token is: 24; Next Lexeme is: 4
+Next Token is: 25; Next Lexeme is: ,
+Next Token is: 24; Next Lexeme is: 3
+Next Token is: 25; Next Lexeme is: ,
+Next Token is: 24; Next Lexeme is: 5
+Next Token is: 25; Next Lexeme is: ,
+Next Token is: 24; Next Lexeme is: 5
+Next Token is: 4; Next Lexeme is: )
+Exiting Layout Type Production
+Exiting Layout Production
+Exiting Widget Production
+Exiting Widgets Production
+Exiting Widgets Production
+******** Lexical Error!! ********
+Next Token is: 21; Next Lexeme is: |
+Exiting GUI Production

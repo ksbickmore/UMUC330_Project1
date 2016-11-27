@@ -1,0 +1,73 @@
+Entering GUI Production
+Next Token is: 0; Next Lexeme is: Window
+Next Token is: 1; Next Lexeme is: Radio Button Test
+Next Token is: 3; Next Lexeme is: (
+Next Token is: 24; Next Lexeme is: 300
+Next Token is: 25; Next Lexeme is: ,
+Next Token is: 24; Next Lexeme is: 200
+Next Token is: 4; Next Lexeme is: )
+Entering Layout Production
+Next Token is: 2; Next Lexeme is: Layout
+Entering Layout Type Production
+Next Token is: 9; Next Lexeme is: Grid
+Next Token is: 3; Next Lexeme is: (
+Next Token is: 24; Next Lexeme is: 5
+Next Token is: 25; Next Lexeme is: ,
+Next Token is: 24; Next Lexeme is: 1
+Next Token is: 4; Next Lexeme is: )
+Exiting Layout Type Production
+Next Token is: 5; Next Lexeme is: :
+Exiting Layout Production
+Entering Widgets Production
+Entering Widget Production
+Next Token is: 14; Next Lexeme is: Group
+Entering Radio Buttons Production
+Entering Radio Button Production
+Next Token is: 18; Next Lexeme is: Radio
+Next Token is: 1; Next Lexeme is: First
+Next Token is: 6; Next Lexeme is: ;
+Exiting Radio Button Production
+Entering Radio Buttons Production
+Entering Radio Button Production
+Next Token is: 18; Next Lexeme is: Radio
+Next Token is: 1; Next Lexeme is: Second
+Next Token is: 6; Next Lexeme is: ;
+Exiting Radio Button Production
+Entering Radio Buttons Production
+Entering Radio Button Production
+Next Token is: 18; Next Lexeme is: Radio
+Next Token is: 1; Next Lexeme is: Third
+Next Token is: 6; Next Lexeme is: ;
+Exiting Radio Button Production
+Entering Radio Buttons Production
+Entering Radio Button Production
+Next Token is: 18; Next Lexeme is: Radio
+Next Token is: 1; Next Lexeme is: Fourth
+Next Token is: 6; Next Lexeme is: ;
+Exiting Radio Button Production
+Entering Radio Buttons Production
+Entering Radio Button Production
+Next Token is: 18; Next Lexeme is: Radio
+Next Token is: 1; Next Lexeme is: Fifth
+Next Token is: 6; Next Lexeme is: ;
+Exiting Radio Button Production
+Entering Radio Buttons Production
+Entering Radio Button Production
+Exiting Radio Button Production
+Exiting Radio Buttons Production
+Exiting Radio Buttons Production
+Exiting Radio Buttons Production
+Exiting Radio Buttons Production
+Exiting Radio Buttons Production
+Exiting Radio Buttons Production
+Next Token is: 19; Next Lexeme is: End
+Next Token is: 6; Next Lexeme is: ;
+Exiting Widget Production
+Entering Widgets Production
+Entering Widget Production
+Exiting Widget Production
+Exiting Widgets Production
+Exiting Widgets Production
+Next Token is: 19; Next Lexeme is: End
+Next Token is: 20; Next Lexeme is: .
+Exiting GUI Production

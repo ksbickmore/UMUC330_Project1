@@ -1,0 +1,84 @@
+\hypertarget{_parser_8cpp}{}\section{C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\+Parser.cpp File Reference}
+\label{_parser_8cpp}\index{C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\+Parser.\+cpp@{C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\+Parser.\+cpp}}
+
+
+Contains the source code for the \hyperlink{class_parser}{Parser} class.  
+
+
+Include dependency graph for Parser.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d73/_parser_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_parser_8cpp_a2dc158afb0b9181c7ddc4e80b301c4de}{W\+R\+I\+T\+E\+\_\+\+L\+I\+NE}(writevalue)
+\item 
+\#define \hyperlink{_parser_8cpp_a32f584d1b4b908e205becafaaf5b35e2}{P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK}(C\+O\+ND)
+\item 
+\#define \hyperlink{_parser_8cpp_aa23b742766deca040a8e8b41bb6ad3f6}{P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK}(C\+O\+ND)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Kristopher Bickmore 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 20, 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_parser_8cpp_a32f584d1b4b908e205becafaaf5b35e2}{}\label{_parser_8cpp_a32f584d1b4b908e205becafaaf5b35e2} 
+\index{Parser.\+cpp@{Parser.\+cpp}!P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK@{P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK}}
+\index{P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK@{P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK}!Parser.\+cpp@{Parser.\+cpp}}
+\subsubsection{\texorpdfstring{P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK}{PARSER\_CHECK}}
+{\footnotesize\ttfamily \#define P\+A\+R\+S\+E\+R\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{C\+O\+ND }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(COND)\{ \(\backslash\)
+        writeTokenLexeme(token, lexer.getCurrentLexeme());\(\backslash\)
+        token = lexer.getNextToken(); \(\backslash\)
+    \} \(\backslash\)
+    else\{ \(\backslash\)
+        ret = \textcolor{keyword}{false};\(\backslash\)
+        goto cleanup;\(\backslash\)
+    \}
+\end{DoxyCode}
+takes a conditional that compares the current token to the expected token value. If the token is valid syntactically then the process continues by writing the values and getting the next token. Otherwise the process fails. \hypertarget{_parser_8cpp_aa23b742766deca040a8e8b41bb6ad3f6}{}\label{_parser_8cpp_aa23b742766deca040a8e8b41bb6ad3f6} 
+\index{Parser.\+cpp@{Parser.\+cpp}!P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK@{P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK}}
+\index{P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK@{P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK}!Parser.\+cpp@{Parser.\+cpp}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK}{PRODUCTION\_CHECK}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+T\+I\+O\+N\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{C\+O\+ND }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(!COND)\{\(\backslash\)
+        ret = \textcolor{keyword}{false};\(\backslash\)
+        goto cleanup;\(\backslash\)
+    \}
+\end{DoxyCode}
+takes a conditional that compares whether a production function succeeded or not. \hypertarget{_parser_8cpp_a2dc158afb0b9181c7ddc4e80b301c4de}{}\label{_parser_8cpp_a2dc158afb0b9181c7ddc4e80b301c4de} 
+\index{Parser.\+cpp@{Parser.\+cpp}!W\+R\+I\+T\+E\+\_\+\+L\+I\+NE@{W\+R\+I\+T\+E\+\_\+\+L\+I\+NE}}
+\index{W\+R\+I\+T\+E\+\_\+\+L\+I\+NE@{W\+R\+I\+T\+E\+\_\+\+L\+I\+NE}!Parser.\+cpp@{Parser.\+cpp}}
+\subsubsection{\texorpdfstring{W\+R\+I\+T\+E\+\_\+\+L\+I\+NE}{WRITE\_LINE}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+L\+I\+NE(\begin{DoxyParamCaption}\item[{}]{writevalue }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(print)\{\(\backslash\)
+        cout << writevalue << endl;\(\backslash\)
+    \}\(\backslash\)
+    outfile << writevalue << endl;
+\end{DoxyCode}
+Writes a string to to the parser\textquotesingle{}s ofstream, also prints to stdout if print is true. 
+\begin{DoxyParams}{Parameters}
+{\em writevalue} & \\
+\hline
+\end{DoxyParams}

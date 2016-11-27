@@ -1,0 +1,206 @@
+\hypertarget{class_parser}{}\section{Parser Class Reference}
+\label{class_parser}\index{Parser@{Parser}}
+
+
+The parser class parses a specific grammar.  
+
+
+
+
+Collaboration diagram for Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{d0/d5d/class_parser__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_parser_a91939ccabb3a2337cd959386b36fc8b0}{Parser} (std\+::experimental\+::filesystem\+::path in\+Filename, std\+::string \hyperlink{class_parser_aa5fb86beefedf2e8bbefca807fc74bca}{outfile}, bool \hyperlink{class_parser_a127bec7e69bb49eadf9f935bd680fb6c}{print})  throw (std\+::runtime\+\_\+error)
+\item 
+void \hyperlink{class_parser_aa419c434b0e0def8c101bf906928a5ba}{file} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_parser_aa1ca665de0b8bb360a8bb084c4044861}{gui\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_a5edcbcd8826520596b79dae93096425d}{layout\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_a7a248c83d07922badb615458a943d5dc}{layout\+\_\+type\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_a7576c690add9d1f68a5781c8c240d6a1}{align\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_ac5fd99f9c1c8e4c72c04c0a4c58a5caf}{widget\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_a9d1dce16ca4c75ff9a3208cc8200dd23}{widgets\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_a3cd45dd7f2cf5d84955ac8efca423073}{radio\+\_\+buttons\+\_\+production} ()
+\item 
+bool \hyperlink{class_parser_a67083b88f1f2755a7ea81830524c1551}{radio\+\_\+button\+\_\+production} ()
+\item 
+void \hyperlink{class_parser_a70c67e7914ab1daad785f3d96ca40b6a}{write\+Token\+Lexeme} (\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} \hyperlink{class_parser_a77945ac7a42745c4655c2cfd0152c891}{token}, std\+::string lexeme)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_parser_aa5fb86beefedf2e8bbefca807fc74bca}{}\label{class_parser_aa5fb86beefedf2e8bbefca807fc74bca} 
+std\+::ofstream \hyperlink{class_parser_aa5fb86beefedf2e8bbefca807fc74bca}{outfile}
+\begin{DoxyCompactList}\small\item\em The output file stream associated with the current \hyperlink{class_lexer}{Lexer} input file stream. \end{DoxyCompactList}\item 
+\hypertarget{class_parser_aad05518621c5340d31f2b986a6467584}{}\label{class_parser_aad05518621c5340d31f2b986a6467584} 
+\hyperlink{class_lexer}{Lexer} \hyperlink{class_parser_aad05518621c5340d31f2b986a6467584}{lexer}
+\begin{DoxyCompactList}\small\item\em The lexer which will provide tokens and lexemes. \end{DoxyCompactList}\item 
+\hypertarget{class_parser_a77945ac7a42745c4655c2cfd0152c891}{}\label{class_parser_a77945ac7a42745c4655c2cfd0152c891} 
+\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token} \hyperlink{class_parser_a77945ac7a42745c4655c2cfd0152c891}{token}
+\begin{DoxyCompactList}\small\item\em A token whose value will be proviced by the \hyperlink{class_lexer}{Lexer} class. \end{DoxyCompactList}\item 
+\hypertarget{class_parser_a127bec7e69bb49eadf9f935bd680fb6c}{}\label{class_parser_a127bec7e69bb49eadf9f935bd680fb6c} 
+bool \hyperlink{class_parser_a127bec7e69bb49eadf9f935bd680fb6c}{print}
+\begin{DoxyCompactList}\small\item\em This value indicates whether or not the parser will print its output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_parser}{Parser} class is used to parse each Token created by the \hyperlink{class_lexer}{Lexer} class and to parse the overall syntax of the grammar\+:~\newline
+ gui \+:\+:= Window S\+T\+R\+I\+NG \textquotesingle{}(\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{})\textquotesingle{} layout widgets End \textquotesingle{}.\textquotesingle{}~\newline
+ layout \+:\+:= Layout layout\+\_\+type \textquotesingle{}\+:\textquotesingle{}~\newline
+ layout\+\_\+type \+:\+:=~\newline
+ Flow \textquotesingle{}(\textquotesingle{} \mbox{[} align \mbox{]} \textquotesingle{})\textquotesingle{}$\vert$~\newline
+ Border \textquotesingle{}(\textquotesingle{} \mbox{[} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \mbox{]} \textquotesingle{})\textquotesingle{}$\vert$~\newline
+ Grid \textquotesingle{}(\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \mbox{[}\textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER \textquotesingle{},\textquotesingle{} N\+U\+M\+B\+ER\mbox{]} \textquotesingle{})\textquotesingle{}~\newline
+ align \+:\+:= L\+E\+FT $\vert$ R\+I\+G\+HT $\vert$ C\+E\+N\+T\+ER~\newline
+ widgets \+:\+:= widget widgets $\vert$ widget~\newline
+ widget \+:\+:=~\newline
+ Button S\+T\+R\+I\+NG \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Group radio\+\_\+buttons End \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Label S\+T\+R\+I\+NG \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Panel layout widgets End \textquotesingle{};\textquotesingle{} $\vert$~\newline
+ Textfield N\+U\+M\+B\+ER \textquotesingle{};\textquotesingle{}~\newline
+ radio\+\_\+buttons \+:\+:= radio\+\_\+button radio\+\_\+buttons $\vert$ radio\+\_\+button~\newline
+ radio\+\_\+button \+:\+:= Radio S\+T\+R\+I\+NG \textquotesingle{};\textquotesingle{}~\newline
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_parser_a91939ccabb3a2337cd959386b36fc8b0}{}\label{class_parser_a91939ccabb3a2337cd959386b36fc8b0} 
+\index{Parser@{Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{Parser()}{Parser()}}
+{\footnotesize\ttfamily Parser\+::\+Parser (\begin{DoxyParamCaption}\item[{std\+::experimental\+::filesystem\+::path}]{in\+Filename,  }\item[{std\+::string}]{outfile,  }\item[{bool}]{print }\end{DoxyParamCaption}) throw  std\+::runtime\+\_\+error) }
+
+The \hyperlink{class_parser}{Parser} constructor 
+\begin{DoxyParams}{Parameters}
+{\em in\+Filename} & a path to the current file to be parsed and lexed \\
+\hline
+{\em outfile} & the name of the file which will contain the output of the parser \\
+\hline
+{\em print} & Print output or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A parser object 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_parser_a7576c690add9d1f68a5781c8c240d6a1}{}\label{class_parser_a7576c690add9d1f68a5781c8c240d6a1} 
+\index{Parser@{Parser}!align\+\_\+production@{align\+\_\+production}}
+\index{align\+\_\+production@{align\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{align\+\_\+production()}{align\_production()}}
+{\footnotesize\ttfamily bool Parser\+::align\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the align production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_aa419c434b0e0def8c101bf906928a5ba}{}\label{class_parser_aa419c434b0e0def8c101bf906928a5ba} 
+\index{Parser@{Parser}!file@{file}}
+\index{file@{file}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{file()}{file()}}
+{\footnotesize\ttfamily void Parser\+::file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Begins the process of parsing the input file \hypertarget{class_parser_aa1ca665de0b8bb360a8bb084c4044861}{}\label{class_parser_aa1ca665de0b8bb360a8bb084c4044861} 
+\index{Parser@{Parser}!gui\+\_\+production@{gui\+\_\+production}}
+\index{gui\+\_\+production@{gui\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{gui\+\_\+production()}{gui\_production()}}
+{\footnotesize\ttfamily bool Parser\+::gui\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the gui production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_a5edcbcd8826520596b79dae93096425d}{}\label{class_parser_a5edcbcd8826520596b79dae93096425d} 
+\index{Parser@{Parser}!layout\+\_\+production@{layout\+\_\+production}}
+\index{layout\+\_\+production@{layout\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{layout\+\_\+production()}{layout\_production()}}
+{\footnotesize\ttfamily bool Parser\+::layout\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the layout production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_a7a248c83d07922badb615458a943d5dc}{}\label{class_parser_a7a248c83d07922badb615458a943d5dc} 
+\index{Parser@{Parser}!layout\+\_\+type\+\_\+production@{layout\+\_\+type\+\_\+production}}
+\index{layout\+\_\+type\+\_\+production@{layout\+\_\+type\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{layout\+\_\+type\+\_\+production()}{layout\_type\_production()}}
+{\footnotesize\ttfamily bool Parser\+::layout\+\_\+type\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the layout type production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_a67083b88f1f2755a7ea81830524c1551}{}\label{class_parser_a67083b88f1f2755a7ea81830524c1551} 
+\index{Parser@{Parser}!radio\+\_\+button\+\_\+production@{radio\+\_\+button\+\_\+production}}
+\index{radio\+\_\+button\+\_\+production@{radio\+\_\+button\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{radio\+\_\+button\+\_\+production()}{radio\_button\_production()}}
+{\footnotesize\ttfamily bool Parser\+::radio\+\_\+button\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the radio button production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_a3cd45dd7f2cf5d84955ac8efca423073}{}\label{class_parser_a3cd45dd7f2cf5d84955ac8efca423073} 
+\index{Parser@{Parser}!radio\+\_\+buttons\+\_\+production@{radio\+\_\+buttons\+\_\+production}}
+\index{radio\+\_\+buttons\+\_\+production@{radio\+\_\+buttons\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{radio\+\_\+buttons\+\_\+production()}{radio\_buttons\_production()}}
+{\footnotesize\ttfamily bool Parser\+::radio\+\_\+buttons\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the radio buttons production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_ac5fd99f9c1c8e4c72c04c0a4c58a5caf}{}\label{class_parser_ac5fd99f9c1c8e4c72c04c0a4c58a5caf} 
+\index{Parser@{Parser}!widget\+\_\+production@{widget\+\_\+production}}
+\index{widget\+\_\+production@{widget\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{widget\+\_\+production()}{widget\_production()}}
+{\footnotesize\ttfamily bool Parser\+::widget\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the widget production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_a9d1dce16ca4c75ff9a3208cc8200dd23}{}\label{class_parser_a9d1dce16ca4c75ff9a3208cc8200dd23} 
+\index{Parser@{Parser}!widgets\+\_\+production@{widgets\+\_\+production}}
+\index{widgets\+\_\+production@{widgets\+\_\+production}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{widgets\+\_\+production()}{widgets\_production()}}
+{\footnotesize\ttfamily bool Parser\+::widgets\+\_\+production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Validates the widgets production syntax. \begin{DoxyReturn}{Returns}
+true if syntax is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_parser_a70c67e7914ab1daad785f3d96ca40b6a}{}\label{class_parser_a70c67e7914ab1daad785f3d96ca40b6a} 
+\index{Parser@{Parser}!write\+Token\+Lexeme@{write\+Token\+Lexeme}}
+\index{write\+Token\+Lexeme@{write\+Token\+Lexeme}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{write\+Token\+Lexeme()}{writeTokenLexeme()}}
+{\footnotesize\ttfamily void Parser\+::write\+Token\+Lexeme (\begin{DoxyParamCaption}\item[{\hyperlink{_lexer_8h_a6a9e93b081bad7fc74c17306fb168c1f}{Token}}]{token,  }\item[{std\+::string}]{lexeme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Writes the next token and lexeme to the output file, prints the output to screen if print is true. 
+\begin{DoxyParams}{Parameters}
+{\em token} & the available token \\
+\hline
+{\em lexeme} & the available lexeme \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\hyperlink{_parser_8h}{Parser.\+h}\item 
+C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\hyperlink{_parser_8cpp}{Parser.\+cpp}\end{DoxyCompactItemize}

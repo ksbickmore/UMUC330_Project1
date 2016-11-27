@@ -1,0 +1,97 @@
+\hypertarget{class_string_helper}{}\section{String\+Helper Class Reference}
+\label{class_string_helper}\index{String\+Helper@{String\+Helper}}
+
+
+This class assists in handling std\+::string variables.  
+
+
+
+
+Collaboration diagram for String\+Helper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{d4/d58/class_string_helper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::list$<$ std\+::string $>$ \hyperlink{class_string_helper_a03cb28b0b0ced4aca4ccac59bdd74625}{split} (const std\+::string \&source, char delimiter)
+\item 
+static std\+::string \hyperlink{class_string_helper_a7861a9bf77dd724b5c046e34fe43eaa4}{trim} (const std\+::string \&s)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::string \hyperlink{class_string_helper_a0a203a5eed0ff6d62b0a7530dee06386}{to\+String} (const T \&subject)
+\item 
+static std\+::vector$<$ std\+::string $>$ \hyperlink{class_string_helper_a783526b9f8fd876bddefd767537f49cf}{splitpath} (const std\+::string \&str, const std\+::set$<$ char $>$ delimiters)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_string_helper_a03cb28b0b0ced4aca4ccac59bdd74625}{}\label{class_string_helper_a03cb28b0b0ced4aca4ccac59bdd74625} 
+\index{String\+Helper@{String\+Helper}!split@{split}}
+\index{split@{split}!String\+Helper@{String\+Helper}}
+\subsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily static std\+::list$<$std\+::string$>$ String\+Helper\+::split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source,  }\item[{char}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Splits a string into multiple strings at each location of the given delimiter. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the string to be split \\
+\hline
+{\em delimiter} & the character which will determine where to split the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list containing all the strings 
+\end{DoxyReturn}
+\hypertarget{class_string_helper_a783526b9f8fd876bddefd767537f49cf}{}\label{class_string_helper_a783526b9f8fd876bddefd767537f49cf} 
+\index{String\+Helper@{String\+Helper}!splitpath@{splitpath}}
+\index{splitpath@{splitpath}!String\+Helper@{String\+Helper}}
+\subsubsection{\texorpdfstring{splitpath()}{splitpath()}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::string$>$ String\+Helper\+::splitpath (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const std\+::set$<$ char $>$}]{delimiters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Splits a string representing a file path based on delimiters. Similar to split and it needs to be determined which is better. 
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to be split \\
+\hline
+{\em delimiters} & the set of delimiters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector containing the split path 
+\end{DoxyReturn}
+\hypertarget{class_string_helper_a0a203a5eed0ff6d62b0a7530dee06386}{}\label{class_string_helper_a0a203a5eed0ff6d62b0a7530dee06386} 
+\index{String\+Helper@{String\+Helper}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!String\+Helper@{String\+Helper}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::string String\+Helper\+::to\+String (\begin{DoxyParamCaption}\item[{const T \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Converts a given value to a string 
+\begin{DoxyParams}{Parameters}
+{\em subject} & the value to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new string 
+\end{DoxyReturn}
+\hypertarget{class_string_helper_a7861a9bf77dd724b5c046e34fe43eaa4}{}\label{class_string_helper_a7861a9bf77dd724b5c046e34fe43eaa4} 
+\index{String\+Helper@{String\+Helper}!trim@{trim}}
+\index{trim@{trim}!String\+Helper@{String\+Helper}}
+\subsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily static std\+::string String\+Helper\+::trim (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a copy the string, with leading and trailing whitespace removed. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to be trimmed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the copy of the string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+M\+S\+C330/\+Week4/\+P\+R\+O\+J\+E\+C\+T1/\hyperlink{stringhelper_8h}{stringhelper.\+h}\end{DoxyCompactItemize}
